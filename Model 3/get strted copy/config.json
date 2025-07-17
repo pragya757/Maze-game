@@ -1,0 +1,38 @@
+{
+  "display": {
+    "width": 600,
+    "height":600,
+    "caption": "Maze",
+    "fps": 100
+  },
+  "files": {
+    "maze_file": "D:\\maze_grid.npy",
+    "source_destination_file": "D:\\source_destination.npy"
+  },
+  "colors": {
+    "background": [255, 255, 255],
+    "obstacle": [0, 0, 0],
+    "free_space": [255, 255, 255],
+    "grid_lines": [200, 200, 200],
+    "path": [0, 0, 255],
+    "start": [0, 255, 0],
+    "goal": [255, 0, 255],
+    "agent": [255, 100, 0]
+  },
+  "sizes": {
+    "path_line_width": 4,
+    "start_radius": 12,
+    "goal_radius": 12,
+    "agent_radius": 15,
+    "grid_line_width": 1
+  },
+  "simulation": {
+    "auto_reset": true,
+    "loop_path": true
+  },
+  "training": {
+    "epsilon": 1.0,
+    "epsilon_min": 0.01,
+    "epsilon_decay": 0.998
+  }
+}
