@@ -39,21 +39,35 @@ Saved models and best weights.
 Supports result reproduction via exported logs.
 
 # 📊 Performance Metrics
-Cumulative Reward
+1) Cumulative Reward
 
-Temporal Difference (TD) Error
+2) Temporal Difference (TD) Error
 
-Episode Steps
+3) Episode Steps
 
-Epsilon Decay
+4) Epsilon Decay
 
-Average Return
+5) Average Return
 
-Training Loss
+6) Training Loss
 
-Graphs saved as high-quality vector art suitable for publications.
+7) Graphs saved as high-quality vector art suitable for publications.
 
 # ⚙️ Usage
 python train_agent.py
 
 Modify config.py to select the model architecture and hyperparameters.
+
+# 📈 Visualizations
+Performance graphs are auto-generated and saved under /plots/. Includes multipart figures, colorblind-friendly palettes, and LaTeX-ready labels.
+
+# 📊 Results Summary
+See /results/summary_table.csv and generated plots comparing:
+
+| Model           | Avg. Reward | TD Error | Steps to Goal | Success Rate |
+| --------------- | ----------- | -------- | ------------- | ------------ |
+| 2× Conv Layers  | Best        | Lowest   | Fewest        | Highest      |
+| 2× Dense Layers | Moderate    | Medium   | Moderate      | Medium       |
+| 3× Dense Layers | Lowest      | Highest  | Longest       | Lowest       |
+
+
