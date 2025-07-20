@@ -5,7 +5,6 @@ import sys
 import os
 from pathlib import Path
 
-# Create training_plots directory if it doesn't exist
 plots_dir = Path('training_plots')
 plots_dir.mkdir(exist_ok=True)
 
