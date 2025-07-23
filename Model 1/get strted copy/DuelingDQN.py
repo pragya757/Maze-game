@@ -8,7 +8,7 @@ import random
 from collections import deque
 import os
 
-# Neural Network for Dueling DQN
+# Neural Network for Dueling DQ
 class DuelingDQN(nn.Module):
     def __init__(self, state_size, action_size):
         super(DuelingDQN, self).__init__()
@@ -30,7 +30,7 @@ class DuelingDQN(nn.Module):
             nn.Linear(64, 1)
         )
         
-        # Advantage stream
+        
         self.advantage_stream = nn.Sequential(
             nn.Linear(128, 64),
             nn.ReLU(),
@@ -38,9 +38,9 @@ class DuelingDQN(nn.Module):
         )
     
     def forward(self, x):
-        # Ensure input is 4D tensor: [batch_size, channels, height, width]
-        if x.dim() == 5:  # If we have [1, 1, 2, 15, 15]
-            x = x.squeeze(1)  # Remove extra dimension
+        
+        if x.dim() == 5:  
+            x = x.squeeze(1)  
         
         x = x.float()
         x = F.relu(self.conv1(x))
